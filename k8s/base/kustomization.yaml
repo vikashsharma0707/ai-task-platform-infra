@@ -2,7 +2,7 @@ resources:
 
 - namespace.yaml
 - configmap.yaml
-- secret.yaml
+# - secret.yaml
 
 - mongodb/pvc.yaml
 - mongodb/deployment.yaml
