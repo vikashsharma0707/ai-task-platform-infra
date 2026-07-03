@@ -1,0 +1,38 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: app-ingress
+  namespace: ai-platform
+
+spec:
+
+  ingressClassName: nginx
+
+  rules:
+    - host: ai-platform.local
+
+      http:
+        paths:
+
+          - path: /
+
+            pathType: Prefix
+
+            backend:
+              service:
+                name: frontend
+
+                port:
+                  number: 80
+
+          - path: /api
+
+            pathType: Prefix
+
+            backend:
+              service:
+                name: backend
+
+                port:
+                  number: 5000

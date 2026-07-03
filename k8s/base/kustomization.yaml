@@ -1,0 +1,22 @@
+resources:
+
+- namespace.yaml
+- configmap.yaml
+- secret.yaml
+
+- mongodb/pvc.yaml
+- mongodb/deployment.yaml
+- mongodb/service.yaml
+
+- redis/deployment.yaml
+- redis/service.yaml
+
+- backend/deployment.yaml
+- backend/service.yaml
+- backend/ingress.yaml
+
+- frontend/deployment.yaml
+- frontend/service.yaml
+
+- worker/deployment.yaml
+- worker/hpa.yaml
